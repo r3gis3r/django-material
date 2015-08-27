@@ -426,6 +426,10 @@ ul.side-nav.module-menu li.active>a>span.badge {
     margin-top: 0;
 }
 
+.change-form .related-widget-wrapper select.filtered {
+    height: 200px;
+}
+
 @media only screen and (min-width : 601px) {
     .change-form .multiselect {
         margin-bottom:40px;

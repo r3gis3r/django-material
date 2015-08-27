@@ -19,6 +19,9 @@ window.SelectFilter = {
             return;
         }
         var from_box = document.getElementById(field_id);
+        if($(from_box).hasClass("initialized")){
+            window.jQuery(from_box).material_select("destroy");
+        }
         from_box.id += '_from'; // change its ID
         from_box.className = 'filtered material-ignore';
 
@@ -41,14 +44,14 @@ window.SelectFilter = {
 
         // <div class="selector-available">
         var selector_available = quickElement('div', selector_div);
-        selector_available.className = 'selector-available col s12 m6';
+        selector_available.className = 'selector-available col s12 m5';
         var title_available = quickElement('label', selector_available, interpolate(gettext('Available %s') + ' ', [field_name]));
 
         selector_available.appendChild(from_box);
 
         // <ul class="selector-chooser">
         var selector_chooser = quickElement('ul', selector_div);
-        selector_chooser.className = 'selector-chooser col s12';
+        selector_chooser.className = 'selector-chooser col s12 m1';
         var add_link = quickElement('a', quickElement('li', selector_chooser), '', 'title', gettext('Choose'), 'href', 'javascript: (function(){ SelectBox.move("' + field_id + '_from","' + field_id + '_to"); SelectFilter.refresh_icons("' + field_id + '");})()', 'id', field_id + '_add_link');
         add_link.className = 'selector-add btn-floating btn-flat  green lighten-2';
         quickElement('i', add_link).className = 'mdi-navigation-chevron-right';
@@ -58,7 +61,7 @@ window.SelectFilter = {
 
         // <div class="selector-chosen">
         var selector_chosen = quickElement('div', selector_div);
-        selector_chosen.className = 'selector-chosen col s12 m6';
+        selector_chosen.className = 'selector-chosen col s12 m5';
         var title_chosen = quickElement('label', selector_chosen, interpolate(gettext('Chosen %s') + ' ', [field_name]));
 
         var to_box = quickElement('select', selector_chosen, '', 'id', field_id + '_to', 'multiple', 'multiple', 'size', from_box.size, 'name', from_box.getAttribute('name'));

@@ -1,6 +1,6 @@
 {% load i18n admin_static %}
 <div class="related-widget-wrapper">
-    <div class="col s10">
+    <div class="col {% if can_change_related or can_add_related or can_delete_related %}s10{% else %}s12{% endif %}">
         {{ widget }}
     </div>
     {% block links %}

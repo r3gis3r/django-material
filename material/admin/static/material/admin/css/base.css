@@ -426,6 +426,17 @@ ul.side-nav.module-menu li.active>a>span.badge {
     margin-top: 0;
 }
 
+.change-form .field-error .error {
+    display: inline-block;
+    left: 11px;
+    width: 100%;
+}
+
+.change-form .field-error .select-dropdown {
+    border-bottom: 1px solid #F44336;
+    box-shadow: 0 1px 0 0 #F44336;
+}
+
 .change-form .related-widget-wrapper select.filtered {
     height: 200px;
 }

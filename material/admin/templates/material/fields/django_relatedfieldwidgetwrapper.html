@@ -1,8 +1,11 @@
 {% load material_form material_form_internal %}
 
-<div class="row">
+<div class="row related-field-wrapper {% if bound_field.errors %}field-error{% endif %}">
 <label for="{{ bound_field.id_for_label }}" class="col s12 {% part field add_label_class %}{{ form_label_class }}{% endpart %}">
     {{ bound_field.label }}
 </label>
 {{ bound_field }}
+{% if bound_field.errors %}
+    {% include 'material/field_errors.html' %}
+{% endif %}
 </div>

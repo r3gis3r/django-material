@@ -55,7 +55,7 @@ body {
     height: 30px;
     position: relative;
     top: 15px;
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 @media only screen and (max-width : 600px) {
@@ -110,6 +110,9 @@ ul.side-nav.fixed.module-menu li a {
   font-size: 13px;
   line-height: 44px;
   height: 44px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 ul.side-nav.module-menu .collapsible-body li.active, .side-nav.fixed .collapsible-body li.active {
@@ -121,7 +124,7 @@ ul.side-nav.module-menu .collapsible-body li a {
 }
 
 ul.side-nav.module-menu .collapsible-body li .collapsible-body a {
-    margin-left: 60px;
+    margin-left: 30px;
 }
 
 ul.side-nav.module-menu li.active>a>span.badge {
@@ -130,6 +133,7 @@ ul.side-nav.module-menu li.active>a>span.badge {
 
 .side-nav.fixed .collapsible-body li.active.header {
     background-color: #ddd;
+    border-bottom: 1px solid #eee;
 }
 
 .side-nav.fixed .collapsible-body li.active.header>a {
@@ -158,8 +162,8 @@ ul.side-nav.module-menu li.active>a>span.badge {
 
 .breadcrumbs a {
     color: white;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
     text-transform: uppercase;
 }
 
@@ -264,7 +268,7 @@ ul.side-nav.module-menu li.active>a>span.badge {
     background: white;
 }
 
-.results table.dataTable.dtr-inline.collapsed tbody td:first-child:before, 
+.results table.dataTable.dtr-inline.collapsed tbody td:first-child:before,
 .results table.dataTable.dtr-inline.collapsed tbody th:first-child:before {
     top: 18px;
     left: 4px;
@@ -281,10 +285,10 @@ ul.side-nav.module-menu li.active>a>span.badge {
     font-variant: normal;
     text-transform: none;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; 
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.results table.dataTable.dtr-inline.collapsed tbody tr.parent td:first-child:before, 
+.results table.dataTable.dtr-inline.collapsed tbody tr.parent td:first-child:before,
 .results table.dataTable.dtr-inline.collapsed tbody tr.parent th:first-child:before {
     color: orange;
     background-color: #fff;
@@ -357,20 +361,16 @@ ul.side-nav.module-menu li.active>a>span.badge {
 /*
    Change form
 */
-.change-form .card {
-    max-width: 1300px;
-}
-
 .change-form a {
     color: #039be5;
     text-transform: none;
 }
 
-.change-form .card-title {
-    font-size: 2.28rem;
-    line-height: 2.508rem;
-    margin: 1.14rem 0 0.912rem 0;
-    font-weight: 400;
+.change-form .form-title {
+    font-size: 2rem;
+    font-weight: 200;
+    margin-bottom: 30px;
+    margin-top: 0px;
 }
 
 .change-form .checkbox-field {
@@ -397,12 +397,35 @@ ul.side-nav.module-menu li.active>a>span.badge {
     padding-bottom: 0px;
 }
 
+.change-form .section h5,
+.change-form .formset-field h5 {
+    border-bottom: 2px solid #555;
+    padding-bottom: 0.5rem;
+}
+
+.change-form .formset-field table {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
 .change-form .section .row  {
     margin-left: -10px;
 }
 
 .change-form .multiselect .selector-chooser {
     text-align: center;
+}
+
+.change-form .multiselect .selector-chooser li {
+    margin-bottom: 5px;
+}
+
+.change-form .related-widget-wrapper-link {
+    opacity: 0.3;
+}
+
+.change-form .related-widget-wrapper-link:link {
+    opacity: 1;
 }
 
 .errornote {

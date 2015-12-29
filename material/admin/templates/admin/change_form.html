@@ -50,12 +50,6 @@
                     {% endblock %}
                     {% block after_related_objects %}{% endblock %}
                 </div>
-
-                {% block inline_field_sets %}
-                {% for inline_admin_formset in inline_admin_formsets %}
-                {% include inline_admin_formset.opts.template %}
-                {% endfor %}
-                {% endblock %}
                 <div class="card-action">
                     <div class="right-align">
                         {% submit_row %}
